@@ -5,12 +5,13 @@
   border: 0;
 }
 html, body {
-  font-family: 'PT Sans', 'Helvetica';
+  font-family: 'Raleway', sans-serif;
   font-size: 12px;
   height: 100%;
+  background-color: blue;
 }
 button, input, textarea {
-  font-family: 'PT Sans', 'Helvetica';
+  font-family: 'Raleway', sans-serif;
 }
 input[type="text"] {
   height: 35px;
@@ -29,14 +30,23 @@ table a {
 }
 #wrapper {
   min-height: 100%;
-  min-width: 1000px;
+  width: 1000px;
   height: auto !important;
   height: 100%;
-  margin: 0 auto 155px;
+  margin: 55px auto 155px;
+  background-color: green;
+}
+#sidebar {
+  width: 20%;
+  float: left;
+  background-color: red;
+  height: 100%;
 }
 #content {
-  width: auto;
-  background-color: white;
+  width: 79%;
+  height: 100%;
+  float: right;
+
   #contentInner {
     padding: 15px;
   }
@@ -61,36 +71,8 @@ table a {
     font-size: 18px;
   }
 }
-#top {
-  background: #e9c324;
-  width: 100%;
-  padding: 5px;
-  text-align: center;
-  font-size: 35px;
-  color: black;
-  font-weight: 600;
-  text-shadow: 0px 1px 1px #4d4d4d;
-  border-bottom: 5px solid #F5A922;
-  a {
-    color: black;
-  }
-}
-#footer {
-  height: 155px;
-  width: 100%;
-  clear: both;
-  padding: 25px;
-  background: black;
-  border-top: 5px solid orange;
-  color: white;
-  .information {
-    font-size: 15px;
-    margin-bottom: 15px;
-  }
-  a {
-    color: white;
-  }
-}
+
+
 .hidden {
   display: none;
   visibility: hidden;

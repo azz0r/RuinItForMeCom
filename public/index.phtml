@@ -3,7 +3,8 @@ $env    = isset($_SERVER['_ENV']) && $_SERVER['_ENV'] == "production" ? 'prod' :
 $less   = array('bootstrap', 'mixins', 'style', 'pageDesigns', 'quickview', 'loading');
 ?><html lang=en xmlns=http://www.w3.org/1999/xhtml>
 <head>
-    <title>Ruin It For Me</title>
+    <title>Ruin It For Me
+    </title>
     <meta http-equiv=Content-Type content="text/html; charset=utf-8"/>
     <meta http-equiv=Content-Type content=cache/>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
@@ -14,7 +15,7 @@ $less   = array('bootstrap', 'mixins', 'style', 'pageDesigns', 'quickview', 'loa
 
     <!--Fonts-->
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
-    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,700,300' rel='stylesheet' type='text/css'>
     <!-- compiled less file -->
     <?php foreach ($less as $file) { ?>
         <?php if ($env == "prod") { ?>
@@ -29,22 +30,20 @@ $less   = array('bootstrap', 'mixins', 'style', 'pageDesigns', 'quickview', 'loa
     <link media="screen" rel="stylesheet" type="text/css" href="/js/libs/jquery/jquery-ui-1.10.3.custom.min.css" />
 </head>
 <body>
-    <div id="quickviewLatch"></div>
-    <div id="wrapper">
-        <div id="top"><a href="#">Ruin It For Me</a></div>
-        <div id="content">
-            <div id="contentInner"></div>
+<div id="quickviewLatch"></div>
+<div id="wrapper">
+    <div id="sidebar">
+        <div class="sidebarInner">
+            <ul>
+                <li>Spoilers</li>
+                <li>Categories</li>
+            </ul>
         </div>
     </div>
-    <footer id="footer">
-        <h1>Ruin It For Me</h1>
-        <div class="information">
-            <h3>Description</h3>
-        </div>
-        <ul class="support">
-            <li class="btn btn-info"><a href="#aboutUs">About Us</a></li>
-        </ul>
-    </footer>
-    <script data-main="js/main" src="js/libs/require/require.js"></script>
+    <div id="content">
+        <div id="contentInner"></div>
+    </div>
+</div>
+<script data-main="js/main" src="js/libs/require/require.js"></script>
 </body>
 </html>
