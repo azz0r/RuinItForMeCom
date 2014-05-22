@@ -4,9 +4,12 @@ define(['marionette', 'app/Controller'],
     return marionette.AppRouter.extend({
       appRoutes: {
         '': 'landing',
-        landing: 'landing',
         debug: 'debug',
-        aboutUs: 'aboutUs'
+        newest: 'newest',
+        trending: 'trending',
+        mostViewed: 'mostViewed',
+        createSpoiler: 'createSpoiler',
+        contactUs: 'contactUs'
       },
       controller: Controller
     })

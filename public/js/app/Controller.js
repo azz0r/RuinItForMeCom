@@ -12,8 +12,28 @@ define(["jquery", "app/helper/underscore"],
           return MyApp.content.show(new View())
         })
       },
-      aboutUs: function() {
-        return require(["app/views/general/aboutUs"], function(View) {
+      newest: function() {
+        return require(["app/views/spoilers/index"], function(View) {
+          return MyApp.content.show(new View())
+        })
+      },
+      trending: function() {
+        return require(["app/views/spoilers/index"], function(View) {
+          return MyApp.content.show(new View())
+        })
+      },
+      mostViewed: function() {
+        return require(["app/views/spoilers/index"], function(View) {
+          return MyApp.content.show(new View())
+        })
+      },
+      contactUs: function() {
+        return require(["app/views/spoilers/index"], function(View) {
+          return MyApp.content.show(new View())
+        })
+      },
+      createSpoiler: function() {
+        return require(["app/views/spoilers/index"], function(View) {
           return MyApp.content.show(new View())
         })
       }
