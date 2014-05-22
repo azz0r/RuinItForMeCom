@@ -52,21 +52,62 @@ table a {
   float: left;
   background-color: rgba(238, 230, 230, 0.92);
   height: 100%;
+  text-transform:uppercase;
 
   #sidebarInner {
 
+    .area:nth-of-type(1) {
+      margin-top: 0;
+    }
     .area {
-      margin: 15px 0;
+      margin: 15px 0 25px;
       h3 {
         border-bottom: 1px solid #ccc;
         border-top: 1px solid #ccc;
         padding: 15px;
         text-align: center;
+        background-color: white;
+        margin-bottom: 15px;
+        font-weight: 700;
       }
       ul {
         margin: 0 38px;
         li {
+          line-height: 4em;
+          list-style: none;
 
+          a {
+            color: black;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+
+          .circle {
+            border-style: solid;
+            border-width: 4px;
+            border-color: red;
+            border-radius: 50%;
+            display: inline-flex;
+            width: 6px;
+            height: 6px;
+            margin-right: 8px;
+            &.red {
+              border-color: #fb5d5d;
+            }
+            &.blue {
+              border-color: #7b82c2;
+            }
+            &.green {
+              border-color: #abdf71;
+            }
+            &.yellow {
+              border-color: #f5c473;
+            }
+            &.purple {
+              border-color: #d267e8;
+            }
+          }
         }
       }
     }
