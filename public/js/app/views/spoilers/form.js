@@ -1,6 +1,14 @@
-define(["marionette", "underscore", "text!app/templates/spoilers/form.html", "app/models/spoiler"],
+define([
+  "marionette",
+  "underscore",
+  "text!app/templates/spoilers/form.html",
+  "app/models/spoiler"],
+
+
   function(Marionette, _, Template, Model) {
     "use strict"
+
+
     return Backbone.Marionette.ItemView.extend({
 
 
@@ -10,10 +18,6 @@ define(["marionette", "underscore", "text!app/templates/spoilers/form.html", "ap
 
 
       initialize: function(options) {
-
-        // dont break if options is empty
-        options = _.isEmpty(options) ? {} : options;
-
         this.model = new Model();
       },
 
@@ -46,11 +50,11 @@ define(["marionette", "underscore", "text!app/templates/spoilers/form.html", "ap
         if (this.model.isValid()) {
           return this.model.save({}, {
             success: function() {
-              alert('success on save');
-              //return window.location.hash = "newest";
+//              alert('success on save');
+              return window.location.hash = "newest";
             },
             error: function(request, error) {
-              alert('error on save');
+              alert('error on save, please try again');
             }
           })
         }
@@ -58,10 +62,7 @@ define(["marionette", "underscore", "text!app/templates/spoilers/form.html", "ap
 
 
       render: function() {
-
-        var html;
-
-        html = _.template($(Template).html(), this.model.toJSON());
+        var html = _.template($(Template).html(), this.model.toJSON());
         this.$el.html(html);
         return this;
       }

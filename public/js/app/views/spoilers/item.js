@@ -14,11 +14,10 @@ define([
 
       serializeData: function() {
         var model = new Model();
+        model.getCategoryById(this.model.get('category'));
         return {
           model: this.model.toJSON(),
-          options: {
-            enabled: model.getEnabledOptions()
-          }
+          category: this.model.getCategoryById(this.model.get('category'))
         }
       }
 

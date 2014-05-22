@@ -23,6 +23,26 @@ define(["baseModel"],
       },
 
 
+      getCategoryById: function(id) {
+        switch (id) {
+          case "0": default:
+            return "Other";
+          break;
+          case "1":
+            return "Game";
+            break;
+          case "2":
+            return "Movie";
+            break;
+          case "3":
+            return "Book";
+            break;
+          case "4":
+            return "TV Show";
+            break;
+        }
+      },
+
       validation: {
         title: {
           required: true,
