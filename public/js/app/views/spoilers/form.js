@@ -1,6 +1,3 @@
-
-
-
 define(["marionette", "underscore", "text!app/templates/spoilers/form.html", "app/models/spoiler"],
   function(Marionette, _, Template, Model) {
     "use strict"
@@ -23,23 +20,29 @@ define(["marionette", "underscore", "text!app/templates/spoilers/form.html", "ap
 
       onClickSave: function(ev) {
 
-        ev.preventDefault()
+        // prevent default form behaviour
+        ev.preventDefault();
 
-        console.log('on click save');
-
-
+        // if the model is invalid then show the errors in the html
         this.model.on("invalid", function(model, error) {
+
+          // hide all errors
+          $('.alert.alert-danger').addClass('hide');
+
+          //remove hide class from the error name and set the html to the error
           $('#'+error.name+'Error').removeClass('hide').html(error.error);
         });
 
-
+        // set the model to ids in the form
         this.model.set({
           title: $('#title').val(),
           email: $('#email').val(),
           description: $('#description').val(),
           category: $('#category option:selected').val()
-        }, {validate : true});
+        },//validate the model
+          {validate : true});
 
+        // if the model is valid then we save
         if (this.model.isValid()) {
           return this.model.save({}, {
             success: function() {
