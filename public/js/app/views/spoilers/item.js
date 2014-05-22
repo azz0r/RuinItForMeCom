@@ -9,7 +9,7 @@ define([
 
     return Backbone.Marionette.ItemView.extend({
       template: Template,
-      tagName: "tr",
+      tagName: "li",
 
 
       serializeData: function() {

@@ -33,7 +33,7 @@ define(["jquery", "app/helper/underscore"],
         })
       },
       createSpoiler: function() {
-        return require(["app/views/spoilers/index"], function(View) {
+        return require(["app/views/spoilers/form"], function(View) {
           return MyApp.content.show(new View())
         })
       }

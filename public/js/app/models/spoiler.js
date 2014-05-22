@@ -1,10 +1,47 @@
 define(["baseModel"],
   function(baseModel) {
-  return baseModel.extend({
+    return baseModel.extend({
 
 
-    urlRoot: "spoiler"
+      urlRoot: "spoiler",
 
 
-  });
-})
+      validate: function (attrs) {
+
+        if (!attrs.title) {
+          return {name: 'title', error: 'Please fill the title field.'};
+        }
+        if (!attrs.email) {
+          return {name: 'email', error: 'Please fill the email field.'};
+        }
+        if (!attrs.description) {
+          return {name: 'description', error: 'Please fill the description field.'};
+        }
+        if (!attrs.category) {
+          return {name: 'category', error: 'Please fill the category field.'};
+        }
+      },
+
+
+      validation: {
+        title: {
+          required: true,
+          msg: 'title is required'
+        },
+        email: {
+          required: true,
+          msg: 'email is required'
+        },
+        description: {
+          required: true,
+          msg: 'description is required'
+        },
+        category: {
+          required: true,
+          msg: 'category is required'
+        }
+      }
+
+
+    });
+  })
