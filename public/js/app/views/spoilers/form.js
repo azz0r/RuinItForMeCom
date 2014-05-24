@@ -39,18 +39,20 @@ define([
 
         // set the model to ids in the form
         this.model.set({
-          title: $('#title').val(),
-          email: $('#email').val(),
-          description: $('#description').val(),
-          category: $('#category option:selected').val()
-        },//validate the model
-          {validate : true});
+            title: $('#title').val(),
+            email: $('#email').val(),
+            description: $('#description').val(),
+            category: $('#category option:selected').val(),
+            platform: $('#platform option:selected').val()
+          },
+          //validate the model
+          {validate : true}
+        );
 
         // if the model is valid then we save
         if (this.model.isValid()) {
           return this.model.save({}, {
             success: function() {
-//              alert('success on save');
               return window.location.hash = "newest";
             },
             error: function(request, error) {
@@ -62,7 +64,11 @@ define([
 
 
       render: function() {
-        var html = _.template($(Template).html(), this.model.toJSON());
+        var modelInstance = new Model();
+        var html = _.template($(Template).html(), {
+          platforms: modelInstance.getPlatformOptions(),
+          categories: modelInstance.getCategoryOptions()
+        });
         this.$el.html(html);
         return this;
       }
