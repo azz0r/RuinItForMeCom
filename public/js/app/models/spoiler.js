@@ -58,11 +58,11 @@ define(["baseModel"],
 
       getCategoryOptions: function() {
         return {
-          'other': {id: 0, humanised: 'Other'},
-          'game': {id: 5, humanised: 'Game'},
-          'movie': {id: 10, humanised: 'Movie'},
-          'book': {id: 15, humanised: 'Book'},
-          'tvshow': {id: 20, humanised: 'TV Show'}
+          'other': {id: 0, humanised: 'Other', icon: 'ion-help'},
+          'game': {id: 5, humanised: 'Game', icon: 'ion-game-controller-b'},
+          'movie': {id: 10, humanised: 'Movie', icon: 'ion-film-marker'},
+          'book': {id: 15, humanised: 'Book', icon: 'ion-android-book'},
+          'tvshow': {id: 20, humanised: 'TV Show', icon: 'ion-monitor'}
         }
       },
 

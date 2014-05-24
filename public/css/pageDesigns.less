@@ -1,21 +1,29 @@
 #spoilerListContainer {
-
-  //div
-  #collectionLatch {
-
+  #createButton {
+    float: right;
   }
-  //ul
-  #collectionBody {
-    li {
+}
 
-      .title {
+.spoiler {
+  float: left;
+  width: 48%;
+  background-color: white;
+  padding: 2px 5px;
+  margin: 1%;
 
-      }
-      .category {
+  .titleArea {
+    line-height: 2em;
+    font-size: 19px;
+  }
+  .spoilerArea {
+    & {
+      background: black;
+      color: black;
+      padding: 5px;
+      font-size: 15px;
 
-      }
-      .platform {
-
+      &:hover {
+        color: white;
       }
     }
   }

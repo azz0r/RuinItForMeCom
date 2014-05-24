@@ -9,7 +9,8 @@ define([
 
     return Backbone.Marionette.ItemView.extend({
       template: Template,
-      tagName: "li",
+      tagName: 'div',
+      className: 'spoiler',
 
 
       serializeData: function() {

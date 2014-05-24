@@ -1,13 +1,16 @@
 <script type="text/template" id="spoilersItemTemplate">
-    <div>
+    <div class="titleArea">
         <span class="title">
             <%=model.title%>
         </span>
         <span class="category">
-            <%=category.humanised%>
+            <div class="<%=category.icon%>"></div>
         </span>
         <span class="platform">
             <%=platform.humanised%>
         </span>
+    </div>
+    <div class="spoilerArea">
+        <%=model.description%>
     </div>
 </script>
