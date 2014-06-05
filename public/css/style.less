@@ -1,0 +1,169 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  border: 0;
+}
+html, body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  height: 100%;
+}
+body {
+  //http://codepen.io/aBlueSwallow/pen/lwvjd
+  background: linear-gradient(
+    100deg,
+    #cc659d  0%,
+    #a06060 25%,
+    #bea27b 50%,
+    #9ca898 75%,
+    #506d8d 100%) no-repeat center center fixed;
+  background-size: cover;
+}
+
+button, input, textarea {
+  font-family: 'Raleway', sans-serif;
+}
+input[type="text"] {
+  height: 35px;
+}
+.table th, .table td {
+  padding: 5px !important;
+}
+table a {
+  color: black;
+  text-shadow: 0px 1px 0px #ebebeb;
+}
+.ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#wrapper {
+  width: 1000px;
+  margin: 55px auto 155px;
+  background-color: rgba(238, 230, 230, 0.62);
+  height: 1000px;
+}
+#sidebar {
+  height: 1000px;
+  width: 20%;
+  float: left;
+  background-color: rgba(238, 230, 230, 0.92);
+  height: 100%;
+  text-transform:uppercase;
+
+  #sidebarInner {
+
+    .area:nth-of-type(1) {
+      margin-top: 0;
+    }
+    .area {
+      margin: 15px 0 25px;
+      h3 {
+        border-bottom: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+        padding: 15px;
+        text-align: center;
+        background-color: white;
+        margin-bottom: 15px;
+        font-weight: 700;
+      }
+      ul {
+        margin: 0 38px;
+        li {
+          line-height: 4em;
+          list-style: none;
+
+          a {
+            color: black;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+
+          .circle {
+            border-style: solid;
+            border-width: 4px;
+            border-color: red;
+            border-radius: 50%;
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            margin-right: 8px;
+            &.red {
+              border-color: #fb5d5d;
+            }
+            &.blue {
+              border-color: #7b82c2;
+            }
+            &.green {
+              border-color: #abdf71;
+            }
+            &.yellow {
+              border-color: #f5c473;
+            }
+            &.purple {
+              border-color: #d267e8;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+#content {
+  width: 79%;
+  height: 100%;
+  float: right;
+
+  #contentInner {
+    padding: 15px;
+  }
+  h1 {
+    font-size: 108px;
+    text-shadow: 0px 1px 1px #4d4d4d;
+  }
+  h2 {
+    font-size: 30px;
+    margin: 15px 0;
+    font-weight: 400;
+    color: #4a4a4a;
+    text-transform:uppercase;
+  }
+  h3 {
+    font-size: 30px;
+    margin: 30px 0 10px 0;
+  }
+  p {
+    font-size: 18px;
+  }
+}
+
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+.hide {
+  display: none;
+}
+#collectionLatch {
+  clear: both;
+}
+
+textarea {
+  background-image: linear-gradient(#F1F1F1 50%, #F9F9F9 50%);
+  background-size: 100% 4rem;
+  border: 1px solid #CCC;
+  width: 100%;
+  height: 400px;
+  line-height: 2rem;
+  margin: 0 auto;
+  padding: 4px 8px;
+  font: normal 1.7rem sans-serif !important;
+  padding: 4px 8px;
+}
