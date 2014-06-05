@@ -3,14 +3,16 @@
         <span class="title">
             <%=model.title%>
         </span>
+        <% if (platform.id > 0) { %>
+            <span class="platform">
+                · <%=platform.humanised%>
+            </span>
+        <% } %>
         <span class="category">
             <div class="<%=category.icon%>"></div>
         </span>
-        <span class="platform">
-            <%=platform.humanised%>
-        </span>
     </div>
     <div class="spoilerArea">
-        <%=model.description%>
+        <%=_.nl2br(model.description)%>
     </div>
 </script>
