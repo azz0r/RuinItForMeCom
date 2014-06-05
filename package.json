@@ -1,0 +1,13 @@
+{
+  "name": "ruinitforme",
+  "version": "0.1.0",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-less": "~0.11.1",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-requirejs": "*",
+    "grunt-contrib-concat": "*"
+  }
+}
