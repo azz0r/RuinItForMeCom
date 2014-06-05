@@ -41,7 +41,7 @@ define([
         this.model.set({
             title: $('#title').val(),
             email: $('#email').val(),
-            description: $('#description').val(),
+            description: $('#description').val().replace(/\n/g, "<br />"),
             category: $('#category option:selected').val(),
             platform: $('#platform option:selected').val()
           },
