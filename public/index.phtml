@@ -1,5 +1,5 @@
 <?php
-$env    = isset($_SERVER['_ENV']) && $_SERVER['_ENV'] == "production" ? 'prod' : 'dev';
+$env    = isset($_SERVER['_ENV']) ? $_SERVER['_ENV'] : 'dev';
 $less   = array('bootstrap', 'mixins', 'style', 'pageDesigns', 'quickview', 'loading', 'ionicons');
 ?><html lang=en xmlns=http://www.w3.org/1999/xhtml>
 <head>
