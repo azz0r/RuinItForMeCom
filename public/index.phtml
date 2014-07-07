@@ -3,27 +3,29 @@ $env    = isset($_SERVER['_ENV']) && $_SERVER['_ENV'] == "production" ? 'prod' :
 $less   = array('bootstrap', 'mixins', 'style', 'pageDesigns', 'quickview', 'loading', 'ionicons');
 ?><html lang=en xmlns=http://www.w3.org/1999/xhtml>
 <head>
-    <title>Ruin It For Me
-    </title>
+    <title>Ruin It For Me</title>
     <meta http-equiv=Content-Type content="text/html; charset=utf-8"/>
     <meta http-equiv=Content-Type content=cache/>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-    <meta name="description" content="Description">
-    <meta name="revisit-after" content="30 days">
-    <meta name="distribution" content="web">
-    <meta name="keywords" content="keywords">
 
-    <!--Fonts-->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <meta name="description" content="A spoiler site that helps you find out the ending to a video game, book, movie or TV show" />
+    <meta name="revisit-after" content="5 days" />
+    <meta name="distribution" content="web" />
+    <meta name="keywords" content="spoiler site, free spoilers, the end to that book, the end to that video game, the ending to that movie">
+
+    <!-- fonts -->
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,700,300" rel="stylesheet" type="text/css" />
+
     <!-- compiled less file -->
     <?php foreach ($less as $file) { ?>
-        <?php if ($env == "prod") { ?>
-    <link rel="stylesheet" type="text/css" href="/css/<?php echo $file; ?>.css" />
-    <?php } else { ?>
-    <link rel="stylesheet/less" type="text/css" href="/css/<?php echo $file; ?>.less" />
-    <?php } ?>
-        <script src="/js/libs/less.js" type="text/javascript"></script>
+        <?php if ($env == "production") { ?>
+            <link rel="stylesheet" type="text/css" href="/css/<?php echo $file; ?>.css" />
+        <?php } else { ?>
+            <link rel="stylesheet/less" type="text/css" href="/css/<?php echo $file; ?>.less" />
+        <?php } ?>
+            <script src="/js/libs/less.js" type="text/javascript"></script>
     <?php } ?>
 
     <!-- library design -->
@@ -41,27 +43,10 @@ $less   = array('bootstrap', 'mixins', 'style', 'pageDesigns', 'quickview', 'loa
                         <span class="circle red"></span>
                         <a href="#newest">Newest</a>
                     </li>
-<!--                    <li>-->
-<!--                        <span class="circle green"></span>-->
-<!--                        <a href="#mostViewed">Most Viewed</a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <span class="circle yellow"></span>-->
-<!--                        <a href="#trending">Trending</a>-->
-<!--                    </li>-->
-<!--                </ul>-->
-<!--            </div>-->
-<!--            <div class="area">-->
-<!--                <h3>Other</h3>-->
-<!--                <ul>-->
                     <li>
                         <span class="circle purple"></span>
                         <a href="#createSpoiler">Create Spoiler</a>
                     </li>
-<!--                    <li>-->
-<!--                        <span class="circle blue"></span>-->
-<!--                        <a href="#contactUs">Contact Us</a>-->
-<!--                    </li>-->
                 </ul>
             </div>
             <br />
@@ -71,6 +56,10 @@ $less   = array('bootstrap', 'mixins', 'style', 'pageDesigns', 'quickview', 'loa
         <div id="contentInner"></div>
     </div>
 </div>
-<script data-main="js/main" src="js/libs/require/require.js"></script>
+<?php if ($env == "production") { ?>
+    <script data-main="js/build/main" src="js/libs/require/require.js"></script>
+<?php } else { ?>
+    <script data-main="js/main" src="js/libs/require/require.js"></script>
+<?php } ?>
 </body>
 </html>

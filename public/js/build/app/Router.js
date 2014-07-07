@@ -1,0 +1,1 @@
+define(["marionette","app/Controller"],function(e,t){"use strict";return e.AppRouter.extend({appRoutes:{"":"landing",debug:"debug",newest:"newest",trending:"trending",mostViewed:"mostViewed",createSpoiler:"createSpoiler",contactUs:"contactUs"},controller:t})});

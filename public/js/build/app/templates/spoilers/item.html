@@ -1,0 +1,18 @@
+<script type="text/template" id="spoilersItemTemplate">
+    <div class="titleArea">
+        <span class="title">
+            <%=model.title%>
+        </span>
+        <% if (platform.id > 0) { %>
+            <span class="platform">
+                · <%=platform.humanised%>
+            </span>
+        <% } %>
+        <span class="category">
+            <div class="<%=category.icon%>"></div>
+        </span>
+    </div>
+    <div class="spoilerArea">
+        <%=_.nl2br(model.description)%>
+    </div>
+</script>

@@ -1,0 +1,1 @@
+define(["baseCollection","app/models/spoiler"],function(e,t){return e.extend({model:t,url:"spoiler"})});

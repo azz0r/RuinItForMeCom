@@ -1,0 +1,1 @@
+var TemplateCache={get:function(e){this.templates||(this.templates={});var t=this.templates[e];if(!t){var n=$(e).html();t=_.template(n),this.templates[e]=t}return t}};

@@ -1,0 +1,1 @@
+define(["marionette","jquery"],function(e,t){"use strict";var n;return n=new e.Application,n.addRegions({content:"#contentInner"}),n});

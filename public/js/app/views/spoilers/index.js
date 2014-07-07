@@ -5,7 +5,7 @@ define([
   function(Template, CollectionView) {
     "use strict"
 
-    return Backbone.Marionette.Layout.extend({
+    return Backbone.Marionette.LayoutView.extend({
 
 
       template: Template,
@@ -14,8 +14,6 @@ define([
       regions: {
         collectionLatch: '#collectionLatch'
       },
-
-
 
 
       renderCollection: function(options) {

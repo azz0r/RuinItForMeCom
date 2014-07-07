@@ -1,0 +1,1 @@
+define(["text!app/templates/spoilers/collection.html","app/collections/spoilers","app/views/spoilers/item","baseCollectionView"],function(e,t,n,r){"use strict";return r.extend({template:e,childView:n,childViewContainer:"#collectionBody",collection:new t})});
